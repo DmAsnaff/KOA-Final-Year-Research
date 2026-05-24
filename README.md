@@ -19,28 +19,13 @@ This guide provides step-by-step instructions for setting up the development env
 
 ## Step 1 - Prepare the Dataset
 
-This study uses the **OAI Knee Osteoarthritis Severity Grading Dataset** distributed by Chen et al. (2018) through Mendeley Data. The dataset must be obtained separately by the user under the applicable data access agreement.
+This study uses the **OAI Knee Osteoarthritis Severity Grading Dataset** distributed by Chen et al. (2018) through Mendeley Data.
 
 ### Dataset Access
 
 - Access the dataset at:  
   https://data.mendeley.com/datasets/56rmx5bjcr/1
 
-### Dataset Setup
-
-- Download and extract the dataset to the following directory:
-
-```text
-what_stream/datasets/
-```
-
-- For the **Where Stream**, the manually annotated segmentation masks are included in the repository at:
-
-```text
-where_stream/datasets/
-```
-
-- Ensure the folder structure matches the paths defined at the top of each experiment notebook before running the experiments.
 
 ---
 
@@ -62,7 +47,7 @@ pip install -r requirements.txt
 2. Navigate to:
 
 ```text
-what_stream/experiments/
+what_stream/
 ```
 
 3. Run the notebooks in the provided order to reproduce the **What Stream** experiment results.
@@ -74,7 +59,7 @@ what_stream/experiments/
 1. Navigate to:
 
 ```text
-where_stream/experiments/
+where_stream/
 ```
 
 2. Run the notebooks in order to reproduce the **SE-ResUNet progressive experiment** results.
@@ -92,9 +77,3 @@ Two_Stream_Fusion_3.ipynb
 This notebook performs the final image-based fusion evaluation using outputs from both the What Stream and Where Stream models.
 
 ---
-
-# Notes
-
-- Ensure all datasets are correctly extracted before running notebooks.
-- Verify notebook paths if running from a different working directory.
-- GPU acceleration is recommended for training and inference.
